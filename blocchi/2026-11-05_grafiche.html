@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Click Immobiliare — blocco grafiche dal 5 novembre 2026</title>
+<link rel="stylesheet" href="../bot/stile.css">
+<style>
+  /* ══ Copertina: Fiera Milano Rho ══ */
+  .cov-fiera { background: #0B1F1E; }
+  .cov-fiera .grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(90,160,155,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(90,160,155,0.07) 1px, transparent 1px); background-size: 54px 54px; }
+  .cov-fiera .word { position: absolute; top: 70px; right: -14px; font-family: var(--serif); font-size: 150px; font-weight: 700; color: rgba(74,130,128,0.10); letter-spacing: 4px; line-height: 1; }
+  .cov-fiera .ring { position: absolute; border-radius: 50%; top: 190px; left: 380px; transform: translate(-50%, -50%); }
+  .cov-fiera .ring.r1 { width: 150px; height: 150px; border: 1px solid rgba(94,152,150,0.35); }
+  .cov-fiera .ring.r2 { width: 250px; height: 250px; border: 1px solid rgba(94,152,150,0.16); }
+  .cov-fiera .ring.r3 { width: 350px; height: 350px; border: 1px solid rgba(94,152,150,0.07); }
+  .cov-fiera .pin { position: absolute; top: 190px; left: 380px; transform: translate(-50%, -50%); width: 18px; height: 18px; border-radius: 50%; background: var(--teal-light); box-shadow: 0 0 0 5px rgba(94,152,150,0.25), 0 0 0 10px rgba(94,152,150,0.1); }
+  .cov-fiera .pin-label { position: absolute; top: 216px; left: 380px; transform: translateX(-50%); font-size: 8px; letter-spacing: 4px; text-transform: uppercase; color: rgba(200,222,221,0.6); font-weight: 700; white-space: nowrap; }
+  .cov-fiera .content { position: absolute; left: 48px; right: 48px; bottom: 60px; }
+  .cov-fiera .cover-eyebrow { color: var(--teal-light); }
+  .cov-fiera .cover-title { font-size: 46px; color: var(--white); }
+  .cov-fiera .cover-title em { color: var(--teal-pale); }
+  .cov-fiera .cover-sub { margin-top: 16px; font-size: 16px; color: rgba(255,255,255,0.6); max-width: 360px; }
+
+  /* ══ Copertina: breve o transitorio ══ */
+  .cov-formula { background: var(--teal-bg); }
+  .cov-formula .glow { position: absolute; inset: 0; background: radial-gradient(ellipse at 15% 0%, rgba(255,255,255,0.06) 0%, transparent 55%); }
+  .cov-formula .head { position: absolute; top: 64px; left: 48px; right: 48px; }
+  .cov-formula .cover-eyebrow { color: rgba(200,222,221,0.55); }
+  .cov-formula .cover-title { font-size: 48px; color: var(--white); }
+  .cov-formula .cover-title em { color: var(--teal-pale); }
+  .cov-formula .cards { position: absolute; left: 48px; right: 48px; bottom: 64px; height: 190px; display: flex; gap: 18px; }
+  .cov-formula .card { flex: 1; padding: 26px 24px; display: flex; flex-direction: column; justify-content: space-between; }
+  .cov-formula .card.a { background: var(--off-white); }
+  .cov-formula .card.b { border: 1px solid rgba(255,255,255,0.35); }
+  .cov-formula .label-text { font-size: 9px; letter-spacing: 5px; text-transform: uppercase; font-weight: 700; }
+  .cov-formula .card.a .label-text { color: var(--teal-dark); }
+  .cov-formula .card.b .label-text { color: rgba(200,222,221,0.75); }
+  .cov-formula .card .big { font-family: var(--serif); font-size: 34px; line-height: 1.05; }
+  .cov-formula .card.a .big { color: var(--teal-bg); font-weight: 700; }
+  .cov-formula .card.b .big { color: var(--white); }
+  .cov-formula .card .big em { font-style: italic; font-weight: 400; font-size: 22px; display: block; margin-top: 6px; }
+  .cov-formula .card.a .big em { color: var(--teal-dark); }
+  .cov-formula .card.b .big em { color: var(--teal-pale); }
+  .cov-formula .or { position: absolute; left: 50%; bottom: 141px; transform: translate(-50%, 50%); width: 44px; height: 44px; border-radius: 50%; background: var(--teal-dark); border: 1px solid rgba(255,255,255,0.4); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-style: italic; font-size: 20px; color: var(--white); z-index: 5; }
+
+  /* ══ Copertina: affitto breve in regola ══ */
+  .cov-regole { background: var(--cream); }
+  .cov-regole .bar-top { position: absolute; top: 0; left: 0; right: 0; height: 8px; background: var(--teal-dark); }
+  .cov-regole .content { position: absolute; top: 50%; left: 48px; width: 230px; transform: translateY(-50%); }
+  .cov-regole .cover-eyebrow { color: var(--teal-dark); opacity: 0.6; }
+  .cov-regole .cover-title { font-size: 46px; color: var(--teal-bg); font-weight: 700; }
+  .cov-regole .cover-title em { font-style: italic; font-weight: 400; color: var(--teal-dark); display: block; }
+  .cov-regole .rule { width: 36px; height: 2px; background: var(--teal-dark); opacity: 0.35; margin: 18px 0; }
+  .cov-regole .cover-sub { font-size: 15px; color: #777; }
+  .cov-regole .list { position: absolute; top: 50%; right: 44px; width: 210px; transform: translateY(-50%); background: var(--teal-dark); padding: 30px 26px; }
+  .cov-regole .list-head { font-size: 8px; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,0.5); font-weight: 700; margin-bottom: 20px; }
+  .cov-regole .check { display: flex; align-items: center; gap: 14px; padding: 14px 0; border-top: 1px solid rgba(255,255,255,0.14); }
+  .cov-regole .box { width: 22px; height: 22px; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.55); display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 13px; }
+  .cov-regole .check-text { font-family: var(--serif); font-size: 18px; color: var(--white); line-height: 1.2; }
+</style>
+</head>
+<body>
+
+<!-- ═════════ POST 1 · giovedì 5 novembre · Fiera Milano Rho ═════════ -->
+<div class="post" data-id="2026-11-05_fiera-rho">
+  <div class="post-label">5 novembre — Soggiornare vicino a Fiera Milano Rho</div>
+  <div class="row">
+
+    <div class="slide cov-fiera">
+      <div class="grid"></div>
+      <div class="word">FIERA</div>
+      <div class="ring r3"></div><div class="ring r2"></div><div class="ring r1"></div>
+      <div class="pin"></div>
+      <div class="pin-label">Rho · Fiera Milano</div>
+      <div class="swipe-hint on-dark">Scorri</div>
+      <div class="content">
+        <div class="cover-eyebrow">Per chi viaggia per lavoro</div>
+        <div class="cover-title">Fiera Milano Rho:<br>dove <em>soggiornare</em></div>
+        <div class="cover-sub">Perché scegliere un appartamento vicino al polo fieristico.</div>
+      </div>
+    </div>
+
+    <div class="slide cs-light">
+      <div class="left-bar"></div>
+      <div class="bg-num">1</div>
+      <div class="cb on-light tl"></div><div class="cb on-light br"></div>
+      <div class="inner">
+        <div class="tag">01 · Posizione</div>
+        <div class="title">Meno spostamenti,<br><em>più tempo</em></div>
+        <div class="rule"></div>
+        <div class="body">Durante le grandi manifestazioni gli hotel del centro si riempiono in fretta e gli spostamenti si allungano. Un appartamento a Rho ti permette di raggiungere i padiglioni con facilità e di rientrare la sera senza stress.</div>
+      </div>
+      <div class="slide-counter on-light">2 / 4</div>
+      <div class="brand-tag on-light">Click Immobiliare</div>
+    </div>
+
+    <div class="slide cs-dark">
+      <div class="bg-num">2</div>
+      <div class="cb on-dark tl"></div><div class="cb on-dark br"></div>
+      <div class="inner">
+        <div class="tag">02 · Collegamenti</div>
+        <div class="title">Vicino alla fiera,<br><em>collegato a Milano</em></div>
+        <div class="rule"></div>
+        <div class="body">Il polo fieristico è servito dalla metropolitana M1 e dalla stazione ferroviaria Rho Fiera. Il centro di Milano resta comodo da raggiungere anche per una cena o un appuntamento fuori dalla fiera.</div>
+      </div>
+      <div class="slide-counter on-dark">3 / 4</div>
+      <div class="brand-tag on-dark">Click Immobiliare</div>
+    </div>
+
+    <div class="slide cl-dark">
+      <div class="bg-r"></div>
+      <div class="cb on-dark tl"></div><div class="cb on-dark br"></div>
+      <div class="inner">
+        <div class="cta-ey">Fiere, congressi, trasferte</div>
+        <div class="cta-t">Il tuo alloggio<br>per la <em>prossima fiera</em></div>
+        <div class="rule"></div>
+        <div class="cta-s">Appartamenti a Rho e dintorni per espositori, visitatori e professionisti in trasferta. Scrivici per verificare la disponibilità nelle tue date.</div>
+        <div class="cta-btn">Scrivici in DM →</div>
+      </div>
+      <div class="slide-counter on-dark">4 / 4</div>
+      <div class="brand-tag on-dark">Click Immobiliare</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═════════ POST 2 · lunedì 9 novembre · Breve o transitorio ═════════ -->
+<div class="post" data-id="2026-11-09_breve-o-transitorio">
+  <div class="post-label">9 novembre — Affitto breve o transitorio</div>
+  <div class="row">
+
+    <div class="slide cov-formula">
+      <div class="glow"></div>
+      <div class="swipe-hint on-dark">Scorri</div>
+      <div class="head">
+        <div class="cover-eyebrow">Guida per i proprietari</div>
+        <div class="cover-title">Affitto breve<br>o <em>transitorio</em>?</div>
+      </div>
+      <div class="cards">
+        <div class="card a">
+          <div class="label-text">Breve</div>
+          <div class="big">30 giorni<em>al massimo</em></div>
+        </div>
+        <div class="card b">
+          <div class="label-text">Transitorio</div>
+          <div class="big">1–18 mesi<em>di contratto</em></div>
+        </div>
+      </div>
+      <div class="or">o</div>
+    </div>
+
+    <div class="slide cs-light">
+      <div class="left-bar"></div>
+      <div class="bg-num">1</div>
+      <div class="cb on-light tl"></div><div class="cb on-light br"></div>
+      <div class="inner">
+        <div class="tag">01 · Affitto breve</div>
+        <div class="title">Rendita alta,<br><em>gestione intensa</em></div>
+        <div class="rule"></div>
+        <div class="body">Soggiorni fino a 30 giorni per turisti e viaggiatori d'affari. Nei periodi di forte domanda rende di più, ma richiede una gestione continua: prenotazioni, accoglienza, pulizie e adempimenti.</div>
+      </div>
+      <div class="slide-counter on-light">2 / 4</div>
+      <div class="brand-tag on-light">Click Immobiliare</div>
+    </div>
+
+    <div class="slide cs-dark">
+      <div class="bg-num">2</div>
+      <div class="cb on-dark tl"></div><div class="cb on-dark br"></div>
+      <div class="inner">
+        <div class="tag">02 · Affitto transitorio</div>
+        <div class="title">Entrate stabili,<br><em>meno pensieri</em></div>
+        <div class="rule"></div>
+        <div class="body">Contratti da 1 a 18 mesi, legati a un'esigenza temporanea dell'inquilino indicata nel contratto, come un trasferimento o un incarico di lavoro. Garantisce entrate più regolari e una gestione più leggera.</div>
+      </div>
+      <div class="slide-counter on-dark">3 / 4</div>
+      <div class="brand-tag on-dark">Click Immobiliare</div>
+    </div>
+
+    <div class="slide cl-light">
+      <div class="bar-top"></div><div class="bar-bot"></div>
+      <div class="cb on-light tl"></div><div class="cb on-light br"></div>
+      <div class="inner">
+        <div class="cta-ey">Non esiste una formula unica</div>
+        <div class="cta-t">La scelta giusta<br><em>per il tuo immobile</em></div>
+        <div class="rule"></div>
+        <div class="cta-s">Gestiamo sia affitti brevi sia locazioni di medio e lungo periodo. Valutiamo insieme il tuo appartamento e ti consigliamo la soluzione più adatta.</div>
+        <div class="cta-btn">Richiedi una consulenza →</div>
+      </div>
+      <div class="slide-counter on-light">4 / 4</div>
+      <div class="brand-tag on-light">Click Immobiliare</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═════════ POST 3 · giovedì 12 novembre · Affitto breve in regola ═════════ -->
+<div class="post" data-id="2026-11-12_affitto-breve-in-regola">
+  <div class="post-label">12 novembre — Gli adempimenti dell'affitto breve</div>
+  <div class="row">
+
+    <div class="slide cov-regole">
+      <div class="bar-top"></div>
+      <div class="swipe-hint on-light">Scorri</div>
+      <div class="content">
+        <div class="cover-eyebrow">Per i proprietari</div>
+        <div class="cover-title">Affitto breve<em>in regola</em></div>
+        <div class="rule"></div>
+        <div class="cover-sub">Gli obblighi da conoscere prima di accogliere il primo ospite.</div>
+      </div>
+      <div class="list">
+        <div class="list-head">Da non dimenticare</div>
+        <div class="check"><div class="box">✓</div><div class="check-text">CIN</div></div>
+        <div class="check"><div class="box">✓</div><div class="check-text">Alloggiati Web</div></div>
+        <div class="check"><div class="box">✓</div><div class="check-text">Imposta di soggiorno</div></div>
+      </div>
+      <div class="brand-tag on-light">Click Immobiliare</div>
+    </div>
+
+    <div class="slide cs-dark">
+      <div class="bg-num">1</div>
+      <div class="cb on-dark tl"></div><div class="cb on-dark br"></div>
+      <div class="inner">
+        <div class="tag">01 · CIN</div>
+        <div class="title">Il codice<br><em>identificativo nazionale</em></div>
+        <div class="rule"></div>
+        <div class="body">Ogni appartamento affittato per brevi periodi deve avere il CIN. Il codice va indicato in tutti gli annunci online ed esposto all'esterno dell'edificio.</div>
+      </div>
+      <div class="slide-counter on-dark">2 / 4</div>
+      <div class="brand-tag on-dark">Click Immobiliare</div>
+    </div>
+
+    <div class="slide cs-light">
+      <div class="left-bar"></div>
+      <div class="bg-num">2</div>
+      <div class="cb on-light tl"></div><div class="cb on-light br"></div>
+      <div class="inner">
+        <div class="tag">02 · Ospiti e Comune</div>
+        <div class="title">Alloggiati Web e<br><em>imposta di soggiorno</em></div>
+        <div class="rule"></div>
+        <div class="body">I dati di ogni ospite vanno comunicati alla Questura tramite il portale Alloggiati Web entro 24 ore dall'arrivo. Dove il Comune la prevede, l'imposta di soggiorno va riscossa e versata nei tempi stabiliti.</div>
+      </div>
+      <div class="slide-counter on-light">3 / 4</div>
+      <div class="brand-tag on-light">Click Immobiliare</div>
+    </div>
+
+    <div class="slide cl-dark">
+      <div class="bg-r"></div>
+      <div class="cb on-dark tl"></div><div class="cb on-dark br"></div>
+      <div class="inner">
+        <div class="cta-ey">Pensiamo noi alla burocrazia</div>
+        <div class="cta-t">Tu ricevi la rendita,<br><em>noi gestiamo il resto</em></div>
+        <div class="rule"></div>
+        <div class="cta-s">Seguiamo per te adempimenti e comunicazioni, così il tuo immobile lavora senza che tu debba occuparti delle pratiche.</div>
+        <div class="cta-btn">Scrivici in DM →</div>
+      </div>
+      <div class="slide-counter on-dark">4 / 4</div>
+      <div class="brand-tag on-dark">Click Immobiliare</div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

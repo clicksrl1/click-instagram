@@ -1,0 +1,96 @@
+/* Click Immobiliare — stile condiviso per i caroselli Instagram.
+   Ogni slide è 540x540 e viene esportata a 1080x1080 (scala 2x).
+   I font sono fissati su Liberation Serif / Liberation Sans per restare
+   identici ai post già pubblicati. */
+
+:root {
+  --teal-dark: #3A6E6C;
+  --teal: #4A8280;
+  --teal-light: #5E9896;
+  --teal-pale: #C8DEDD;
+  --teal-bg: #2E5856;
+  --teal-deep: #0e2221;
+  --white: #FFFFFF;
+  --off-white: #F5F0EB;
+  --cream: #EDE8E0;
+  --serif: 'Liberation Serif', 'DejaVu Serif', serif;
+  --sans: 'Liberation Sans', 'DejaVu Sans', sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #111; font-family: var(--sans);
+  display: flex; flex-direction: column; align-items: center;
+  gap: 32px; padding: 48px 24px;
+}
+.post { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.post-label { font-size: 9px; letter-spacing: 5px; color: rgba(200,222,221,0.3); text-transform: uppercase; }
+.row { display: flex; gap: 4px; }
+.slide { width: 540px; height: 540px; position: relative; overflow: hidden; flex-shrink: 0; }
+
+/* ── Elementi comuni ── */
+.brand-tag { position: absolute; bottom: 28px; right: 36px; z-index: 20; font-size: 8px; letter-spacing: 5px; text-transform: uppercase; font-weight: 500; white-space: nowrap; }
+.on-dark.brand-tag { color: rgba(255,255,255,0.22); }
+.on-light.brand-tag { color: rgba(46,88,86,0.3); }
+.slide-counter { position: absolute; top: 32px; right: 36px; z-index: 20; font-family: var(--serif); font-size: 13px; font-style: italic; letter-spacing: 2px; }
+.on-dark.slide-counter { color: rgba(255,255,255,0.25); }
+.on-light.slide-counter { color: rgba(46,88,86,0.28); }
+.swipe-hint { position: absolute; top: 32px; right: 36px; z-index: 20; font-size: 8px; letter-spacing: 4px; text-transform: uppercase; font-weight: 500; display: flex; align-items: center; gap: 5px; }
+.swipe-hint::after { content: '→'; font-size: 11px; }
+.on-dark.swipe-hint { color: rgba(255,255,255,0.25); }
+.on-light.swipe-hint { color: rgba(46,88,86,0.32); }
+.cb { position: absolute; width: 28px; height: 28px; z-index: 15; }
+.cb.tl { top: 26px; left: 26px; }
+.cb.br { bottom: 26px; right: 26px; }
+.cb.on-dark.tl { border-top: 1px solid rgba(255,255,255,0.25); border-left: 1px solid rgba(255,255,255,0.25); }
+.cb.on-dark.br { border-bottom: 1px solid rgba(255,255,255,0.25); border-right: 1px solid rgba(255,255,255,0.25); }
+.cb.on-light.tl { border-top: 1px solid rgba(46,88,86,0.22); border-left: 1px solid rgba(46,88,86,0.22); }
+.cb.on-light.br { border-bottom: 1px solid rgba(46,88,86,0.22); border-right: 1px solid rgba(46,88,86,0.22); }
+
+/* ── Slide di contenuto scura ── */
+.cs-dark { background: var(--teal-bg); }
+.cs-dark .bg-num { position: absolute; top: 16px; left: 40px; font-family: var(--serif); font-size: 180px; color: rgba(255,255,255,0.04); line-height: 1; font-weight: 700; }
+.cs-dark .inner { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; padding: 64px 60px; }
+.cs-dark .tag { font-size: 8px; letter-spacing: 7px; text-transform: uppercase; color: rgba(200,222,221,0.45); font-weight: 600; margin-bottom: 18px; }
+.cs-dark .title { font-family: var(--serif); font-size: 40px; color: var(--white); line-height: 1.05; font-weight: 400; margin-bottom: 18px; }
+.cs-dark .title em { font-style: italic; color: var(--teal-pale); }
+.cs-dark .rule { width: 32px; height: 1px; background: rgba(255,255,255,0.22); margin-bottom: 18px; }
+.cs-dark .body { font-family: var(--serif); font-size: 18px; color: rgba(255,255,255,0.7); line-height: 1.6; font-style: italic; }
+
+/* ── Slide di contenuto chiara ── */
+.cs-light { background: var(--off-white); }
+.cs-light .left-bar { position: absolute; top: 0; bottom: 0; left: 0; width: 5px; background: var(--teal-dark); opacity: 0.18; }
+.cs-light .bg-num { position: absolute; top: 16px; left: 32px; font-family: var(--serif); font-size: 180px; color: rgba(58,110,108,0.06); line-height: 1; font-weight: 700; }
+.cs-light .inner { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; padding: 64px 60px; }
+.cs-light .tag { font-size: 8px; letter-spacing: 7px; text-transform: uppercase; color: var(--teal-dark); opacity: 0.6; font-weight: 700; margin-bottom: 18px; }
+.cs-light .title { font-family: var(--serif); font-size: 40px; color: var(--teal-bg); line-height: 1.05; font-weight: 700; margin-bottom: 18px; }
+.cs-light .title em { font-style: italic; font-weight: 400; }
+.cs-light .rule { width: 32px; height: 2px; background: var(--teal-dark); opacity: 0.35; margin-bottom: 18px; }
+.cs-light .body { font-family: var(--serif); font-size: 18px; color: #5f5f5f; line-height: 1.6; font-style: italic; }
+
+/* ── Slide di chiusura scura ── */
+.cl-dark { background: var(--teal-dark); }
+.cl-dark .bg-r { position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 80%, rgba(0,0,0,0.25) 0%, transparent 55%), radial-gradient(ellipse at 20% 20%, rgba(255,255,255,0.04) 0%, transparent 50%); }
+.cl-dark .inner { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 64px; z-index: 5; }
+.cl-dark .cta-ey { font-size: 8px; letter-spacing: 7px; text-transform: uppercase; color: rgba(255,255,255,0.4); font-weight: 600; margin-bottom: 22px; }
+.cl-dark .cta-t { font-family: var(--serif); font-size: 44px; color: var(--white); line-height: 1.05; font-weight: 400; }
+.cl-dark .cta-t em { font-style: italic; color: var(--teal-pale); }
+.cl-dark .rule { width: 36px; height: 1px; background: rgba(255,255,255,0.25); margin: 22px auto; }
+.cl-dark .cta-s { font-family: var(--serif); font-size: 17px; color: rgba(255,255,255,0.62); font-style: italic; line-height: 1.6; max-width: 340px; }
+.cl-dark .cta-btn { margin-top: 28px; display: inline-flex; align-items: center; gap: 10px; border: 1px solid rgba(255,255,255,0.32); padding: 13px 26px; font-size: 8.5px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.8); font-weight: 700; }
+
+/* ── Slide di chiusura chiara ── */
+.cl-light { background: var(--cream); }
+.cl-light .bar-top { position: absolute; top: 0; left: 0; right: 0; height: 7px; background: var(--teal-dark); }
+.cl-light .bar-bot { position: absolute; bottom: 0; left: 0; right: 0; height: 7px; background: var(--teal-dark); }
+.cl-light .inner { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 64px; }
+.cl-light .cta-ey { font-size: 8px; letter-spacing: 7px; text-transform: uppercase; color: var(--teal-dark); opacity: 0.5; font-weight: 700; margin-bottom: 22px; }
+.cl-light .cta-t { font-family: var(--serif); font-size: 44px; color: var(--teal-bg); line-height: 1.05; font-weight: 700; }
+.cl-light .cta-t em { font-style: italic; font-weight: 400; }
+.cl-light .rule { width: 36px; height: 2px; background: var(--teal-dark); opacity: 0.35; margin: 22px auto; }
+.cl-light .cta-s { font-family: var(--serif); font-size: 17px; color: #707070; font-style: italic; line-height: 1.6; max-width: 340px; }
+.cl-light .cta-btn { margin-top: 28px; display: inline-flex; align-items: center; gap: 10px; background: var(--teal-dark); padding: 13px 26px; font-size: 8.5px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.88); font-weight: 700; }
+
+/* ── Copertine: componenti riutilizzabili ── */
+.cover-eyebrow { font-size: 8px; letter-spacing: 7px; text-transform: uppercase; font-weight: 700; margin-bottom: 16px; }
+.cover-title { font-family: var(--serif); line-height: 1.05; }
+.cover-sub { font-family: var(--serif); font-style: italic; line-height: 1.6; }
