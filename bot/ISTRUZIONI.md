@@ -10,23 +10,26 @@ Questo file è la fonte unica delle regole. Ogni esecuzione del bot (automatica 
 - Commit con autore `Click Immobiliare <clicksrl1@users.noreply.github.com>`, mai indirizzi email personali.
 
 ## Schema di pubblicazione
-- 2 post a settimana: **lunedì e giovedì alle 10:00** (ora di Roma). Sono gli orari migliori indicati da Metricool.
-- Ciclo di 6 uscite che si ripete: **3 caroselli grafici**, poi **3 post con le foto di un appartamento** (lo stesso appartamento per tutti e 3).
+- 2 post a settimana alle 10:00 (ora di Roma), negli orari migliori indicati da Metricool:
+  - **lunedì**: 1 carosello grafico preparato da Claude;
+  - **giovedì**: 1 post con le foto di un appartamento gestito.
+- Le foto dello stesso appartamento coprono **3 giovedì di fila**; poi si passa a un altro appartamento. Quando arrivano le foto di un appartamento, si preparano e programmano subito tutti e 3 i post del giovedì.
+- Non mettere mai due post grafici o due post di foto nella stessa settimana.
 - Il calendario con lo stato di ogni uscita è in `calendario.md`. Va aggiornato a ogni modifica.
 
 ## Esecuzione settimanale automatica
 1. Leggi `calendario.md` e controlla su Metricool (`getScheduledPosts`, prossime 3 settimane) cosa è già programmato. Non programmare mai due volte la stessa uscita.
-2. Se il prossimo blocco grafico non ancora programmato inizia entro 14 giorni, crealo e programmalo (vedi sotto).
-3. Se un blocco appartamento inizia entro 14 giorni e non è programmato, non inventare nulla: chiudi l'esecuzione con un messaggio chiaro per Nicholas che chiede le foto (vedi "Promemoria foto").
+2. Crea e programma i caroselli grafici per tutti i lunedì dei prossimi 14 giorni che non sono ancora programmati (di solito uno a settimana; vedi sotto).
+3. Se un giovedì con le foto di un appartamento cade entro 14 giorni e non è programmato, non inventare nulla: chiudi l'esecuzione con un messaggio chiaro per Nicholas che chiede le foto (vedi "Promemoria foto").
 4. Aggiungi le righe al calendario per mantenere sempre almeno 4 settimane di uscite pianificate.
 5. Fai commit e push di tutto, poi riassumi in 3-4 righe cosa è stato programmato e cosa serve da Nicholas.
 
 ## Caroselli grafici
-- **Temi**: 3 temi nuovi, mai presenti in `temi-usati.md`. Bilancia proprietari e ospiti (circa metà e metà). Dopo l'uso aggiungi i temi a `temi-usati.md`.
+- **Temi**: un tema nuovo per ogni carosello, mai presente in `temi-usati.md`. Bilancia proprietari e ospiti (circa metà e metà). Dopo l'uso aggiungi i temi a `temi-usati.md`.
 - **Tono**: professionale e formale, in italiano, frasi chiare. Niente slang, niente punti esclamativi a raffica.
 - **Struttura**: 4 slide per carosello. 1 copertina con grafica propria, 2 slide di contenuto, 1 slide finale con invito all'azione.
 - **Coerenza**: la copertina non deve promettere un numero di consigli diverso da quelli presenti. I contatori `k / 4` devono essere giusti (li controlla `render.py`).
-- **Grafica**: crea `blocchi/<data-prima-uscita>_grafiche.html` partendo da `blocchi/2026-11-05_grafiche.html`, che è il riferimento approvato. Usa `bot/stile.css` e le classi `cs-dark`, `cs-light`, `cl-dark`, `cl-light`. Alterna slide scure e chiare. Ogni copertina deve avere una grafica diversa dalle altre del blocco e dalle copertine recenti. Palette solo verde petrolio, crema e bianco.
+- **Grafica**: crea `blocchi/<data-uscita>_grafiche.html` partendo da `blocchi/2026-11-05_grafiche.html`, che è il riferimento approvato. Usa `bot/stile.css` e le classi `cs-dark`, `cs-light`, `cl-dark`, `cl-light`. Alterna slide scure e chiare. Ogni copertina deve avere una grafica diversa dalle copertine recenti. Palette solo verde petrolio, crema e bianco.
 - **Cartelle**: ogni carosello ha `data-id="AAAA-MM-GG_tema-breve"`, uguale al nome della cartella in `post/`.
 - **Export**: `python3 bot/render.py blocchi/<file>.html post`. Deve terminare senza problemi; se ne segnala, correggi e ripeti.
 - **Controllo visivo obbligatorio**: crea un'immagine riassuntiva delle slide e guardala. Correggi testi tagliati, sovrapposizioni o refusi prima di pubblicare.
@@ -66,7 +69,7 @@ Prima di programmare, verifica che ogni link immagine risponda 200 dopo il push.
 ## Post con le foto degli appartamenti
 - Le foto arrivano da Nicholas in chat. Salvale in `appartamenti/<slug-appartamento>/originali/`.
 - Se Nicholas non ha indicato zona e caratteristiche, chiedile prima di scrivere le didascalie. Non inventare metri quadri, prezzi, distanze o dotazioni non visibili nelle foto.
-- Prepara le immagini quadrate 1080x1080 (ritaglio centrato, JPEG qualità 90) in `post/<data>_<slug>-1/`, `-2/`, `-3/`.
+- Prepara le immagini quadrate 1080x1080 (ritaglio centrato, JPEG qualità 90) in `post/<data-giovedì>_<slug>-1/`, `-2/`, `-3/`: un post per ciascuno dei 3 giovedì di fila.
 - Dividi le foto nei 3 post in modo sensato: 1) ambienti principali, 2) camere e bagni, 3) dettagli e atmosfera. Ogni post da 2 a 10 foto; con poche foto anche post da 1 foto vanno bene.
 - La prima foto di ciascun post è la più luminosa e ordinata del gruppo.
 - Didascalie nello stesso formato, con zona e caratteristiche fornite da Nicholas e invito a scrivere in DM per disponibilità.
