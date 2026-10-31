@@ -10,17 +10,17 @@ Questo file è la fonte unica delle regole. Ogni esecuzione del bot (automatica 
 - Commit con autore `Click Immobiliare <clicksrl1@users.noreply.github.com>`, mai indirizzi email personali.
 
 ## Schema di pubblicazione
-- 2 post a settimana alle 10:00 (ora di Roma), negli orari migliori indicati da Metricool:
-  - **lunedì**: 1 carosello grafico preparato da Claude;
-  - **giovedì**: 1 post con le foto di un appartamento gestito.
-- Le foto dello stesso appartamento coprono **3 giovedì di fila**; poi si passa a un altro appartamento. Quando arrivano le foto di un appartamento, si preparano e programmano subito tutti e 3 i post del giovedì.
-- Non mettere mai due post grafici o due post di foto nella stessa settimana.
+- 2 post a settimana, **sempre lunedì e giovedì alle 10:00** (ora di Roma), gli orari migliori indicati da Metricool.
+- Sequenza fissa che si ripete senza eccezioni, seguendo le uscite una dopo l'altra:
+  **3 caroselli grafici di fila → 3 post di fila con le foto dello stesso appartamento → 3 caroselli grafici → 3 post con le foto di un altro appartamento → …**
+- Il tipo di ogni uscita è già scritto in `calendario.md`: non cambiarlo mai. Per allungare il calendario, continua la sequenza dall'ultima riga (dopo 3 grafiche vengono 3 foto, dopo 3 foto vengono 3 grafiche), alternando lunedì e giovedì.
+- Quando arrivano le foto di un appartamento, si preparano e programmano subito tutti e 3 i post di quel blocco.
 - Il calendario con lo stato di ogni uscita è in `calendario.md`. Va aggiornato a ogni modifica.
 
 ## Esecuzione settimanale automatica
 1. Leggi `calendario.md` e controlla su Metricool (`getScheduledPosts`, prossime 3 settimane) cosa è già programmato. Non programmare mai due volte la stessa uscita.
-2. Crea e programma i caroselli grafici per tutti i lunedì dei prossimi 14 giorni che non sono ancora programmati (di solito uno a settimana; vedi sotto).
-3. Se un giovedì con le foto di un appartamento cade entro 14 giorni e non è programmato, non inventare nulla: chiudi l'esecuzione con un messaggio chiaro per Nicholas che chiede le foto (vedi "Promemoria foto").
+2. Crea e programma un carosello per ogni uscita di tipo "grafica" dei prossimi 21 giorni che non è ancora programmata (vedi sotto).
+3. Se un'uscita di tipo "appartamento" cade entro 21 giorni e non è programmata, non inventare nulla: chiudi l'esecuzione con un messaggio chiaro per Nicholas che chiede le foto (vedi "Promemoria foto").
 4. Aggiungi le righe al calendario per mantenere sempre almeno 4 settimane di uscite pianificate.
 5. Fai commit e push di tutto, poi riassumi in 3-4 righe cosa è stato programmato e cosa serve da Nicholas.
 
@@ -69,7 +69,7 @@ Prima di programmare, verifica che ogni link immagine risponda 200 dopo il push.
 ## Post con le foto degli appartamenti
 - Le foto arrivano da Nicholas in chat. Salvale in `appartamenti/<slug-appartamento>/originali/`.
 - Se Nicholas non ha indicato zona e caratteristiche, chiedile prima di scrivere le didascalie. Non inventare metri quadri, prezzi, distanze o dotazioni non visibili nelle foto.
-- Prepara le immagini quadrate 1080x1080 (ritaglio centrato, JPEG qualità 90) in `post/<data-giovedì>_<slug>-1/`, `-2/`, `-3/`: un post per ciascuno dei 3 giovedì di fila.
+- Prepara le immagini quadrate 1080x1080 (ritaglio centrato, JPEG qualità 90) in `post/<data-uscita>_<slug>-1/`, `-2/`, `-3/`: un post per ciascuna delle 3 uscite "appartamento" consecutive del calendario.
 - Dividi le foto nei 3 post in modo sensato: 1) ambienti principali, 2) camere e bagni, 3) dettagli e atmosfera. Ogni post da 2 a 10 foto; con poche foto anche post da 1 foto vanno bene.
 - La prima foto di ciascun post è la più luminosa e ordinata del gruppo.
 - Didascalie nello stesso formato, con zona e caratteristiche fornite da Nicholas e invito a scrivere in DM per disponibilità.

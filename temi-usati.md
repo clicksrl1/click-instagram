@@ -18,7 +18,7 @@ Non ripetere questi temi. Aggiungi qui ogni nuovo tema subito dopo averlo progra
 - Conoscere i quartieri di Milano (Brera, Navigli)
 - Quando il tuo immobile rende di più (Fashion Week, Salone del Mobile)
 
-## Caroselli programmati a novembre 2026 (2, 9 e 16 novembre)
+## Caroselli programmati a novembre 2026 (2, 5 e 9 novembre)
 - Soggiornare vicino a Fiera Milano Rho (ospiti in trasferta)
 - Affitto breve o transitorio (proprietari)
 - Affitto breve in regola: CIN, Alloggiati Web, imposta di soggiorno (proprietari)
