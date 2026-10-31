@@ -67,10 +67,15 @@ Salva ogni didascalia in `post/<cartella>/didascalia.txt`. Formato:
 Prima di programmare, verifica che ogni link immagine risponda 200 dopo il push. Dopo, aggiorna `calendario.md` con stato `programmato` e l'id Metricool.
 
 ## Post con le foto degli appartamenti
-- Le foto arrivano da Nicholas in chat. Salvale in `appartamenti/<slug-appartamento>/originali/`.
+- Le foto arrivano da Nicholas in chat o da una cartella del suo Mac. Non caricare gli originali su GitHub (l'archivio è pubblico): annota in `appartamenti/<slug>.md` le informazioni date da Nicholas, cosa si vede nelle foto e quali foto sono state usate in ogni post (vedi `appartamenti/busto-arsizio-3a.md`).
+- Ritaglia con `python3 bot/foto.py <originali> post/<cartella> <foto:posizione> ...` e guarda sempre l'anteprima.
+- Scarta: foto con persone, riflessi del fotografo (controlla schermi TV e specchi ingrandendo), documenti o dati personali, doppioni quasi uguali (anche tra post diversi dello stesso appartamento), primi piani dei sanitari. Meglio 3 foto ottime che 6 ripetitive.
+- Ogni elemento citato in una didascalia deve essere ben visibile nelle foto di quel post. La prima foto deve corrispondere al tema della didascalia.
+- Non indicare il numero dell'appartamento né l'indirizzo. Non dare per scontato il tipo di locazione (breve o lunga) se Nicholas non lo dice. Scrivi "l'appartamento che gestiamo", non "il nostro appartamento".
+- Varia 3-4 hashtag tra un post e l'altro.
 - Se Nicholas non ha indicato zona e caratteristiche, chiedile prima di scrivere le didascalie. Non inventare metri quadri, prezzi, distanze o dotazioni non visibili nelle foto.
-- Prepara le immagini quadrate 1080x1080 (ritaglio centrato, JPEG qualità 90) in `post/<data-uscita>_<slug>-1/`, `-2/`, `-3/`: un post per ciascuna delle 3 uscite "appartamento" consecutive del calendario.
-- Dividi le foto nei 3 post in modo sensato: 1) ambienti principali, 2) camere e bagni, 3) dettagli e atmosfera. Ogni post da 2 a 10 foto; con poche foto anche post da 1 foto vanno bene.
+- Prepara le immagini quadrate 1080x1080 (JPEG qualità 90) in `post/<data-uscita>_<slug>-1/`, `-2/`, `-3/`: un post per ciascuna delle 3 uscite "appartamento" consecutive del calendario.
+- Dividi le foto nei 3 post in modo sensato: 1) ambienti principali, 2) camere e bagni, 3) dettagli e atmosfera. Ogni post da 2 a 10 foto.
 - La prima foto di ciascun post è la più luminosa e ordinata del gruppo.
 - Didascalie nello stesso formato, con zona e caratteristiche fornite da Nicholas e invito a scrivere in DM per disponibilità.
 
