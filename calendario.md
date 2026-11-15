@@ -14,10 +14,10 @@ Il tipo di ogni riga non si cambia. Per aggiungere righe, continua la sequenza d
 | gio 19/11/2026 | appartamento A 3/3 | Busto Arsizio: cucina e divano letto | programmato | `2026-11-19_busto-arsizio-3` · 412356503 |
 | lun 23/11/2026 | grafica 1/3 | Soggiorno in appartamento: cosa sapere | programmato | `2026-11-23_soggiorno-in-appartamento` · 420887047 |
 | gio 26/11/2026 | grafica 2/3 | Tra un ospite e l'altro | programmato | `2026-11-26_tra-un-ospite-e-l-altro` · 420887068 |
-| lun 30/11/2026 | grafica 3/3 | — | da creare | — |
-| gio 03/12/2026 | appartamento B 1/3 | — | servono le foto | — |
-| lun 07/12/2026 | appartamento B 2/3 | — | servono le foto | — |
-| gio 10/12/2026 | appartamento B 3/3 | — | servono le foto | — |
+| lun 30/11/2026 | grafica 3/3 | Soggiorni lunghi: perché scegliere un appartamento | programmato | `2026-11-30_soggiorni-lunghi` · 429046789 |
+| gio 03/12/2026 | appartamento B 1/3 | — | servono le foto (richieste il 15/11) | — |
+| lun 07/12/2026 | appartamento B 2/3 | — | servono le foto (richieste il 15/11) | — |
+| gio 10/12/2026 | appartamento B 3/3 | — | servono le foto (richieste il 15/11) | — |
 | lun 14/12/2026 | grafica 1/3 | — | da creare | — |
 | gio 17/12/2026 | grafica 2/3 | — | da creare | — |
 | lun 21/12/2026 | grafica 3/3 | — | da creare | — |

@@ -27,6 +27,9 @@ Non ripetere questi temi. Aggiungi qui ogni nuovo tema subito dopo averlo progra
 - Soggiorno in appartamento: cosa sapere prima dell'arrivo e durante il soggiorno (ospiti)
 - Tra un ospite e l'altro: pulizia, biancheria, controllo (proprietari)
 
+## Caroselli programmati a novembre 2026 (30 novembre)
+- Soggiorni lunghi: perché scegliere un appartamento, cosa chiedere prima di prenotare, soglia dei 30 giorni (ospiti)
+
 ## Idee non ancora usate
-Ospiti: viaggiare per lavoro a Milano in appartamento invece che in hotel; soggiorni lunghi e corporate housing; un weekend a Milano fuori dai percorsi classici; Rho e dintorni oltre la fiera.
+Ospiti: viaggiare per lavoro a Milano in appartamento invece che in hotel; un weekend a Milano fuori dai percorsi classici; Rho e dintorni oltre la fiera.
 Proprietari: come preparare l'appartamento per gli ospiti; perché l'annuncio e le foto fanno la differenza; come funziona la tariffazione dinamica; pulizie e biancheria professionali; perché le recensioni contano; cura e manutenzione dell'immobile.
